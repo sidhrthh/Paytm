@@ -5,7 +5,7 @@ const { User } = require("../database/db");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config");
 
-router.post("/signin", async (req, res) => {
+router.post("/signup", async (req, res) => {
   const { success } = userSigninSchema.safeParse(req.body);
 
   if (!success) {
